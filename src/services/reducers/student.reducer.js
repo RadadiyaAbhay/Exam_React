@@ -4,7 +4,9 @@ let initalState = {
     student: null,
     students: [],
     isLoading: false,
-    err: null
+    err: null,
+    isRole : student,
+    isLogin :false
 }
 
 export const studentReducer = (state = initalState, action) => {

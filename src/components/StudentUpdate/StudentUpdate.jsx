@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { addStudent, updateStudent } from '../../services/actions/student.action'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router';
@@ -10,7 +10,9 @@ const StudentUpdate = () => {
 
 
     const [student , setStudent] = useState(data.student)
-    
+    useEffect(()=>{
+        setStudent(data.student)
+    },[data])
 
     const hanleInput = (e) => {
         setStudent({ ...student, [e.target.name]: e.target.value })

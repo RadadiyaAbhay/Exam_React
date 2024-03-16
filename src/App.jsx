@@ -7,6 +7,7 @@ import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import { getStudent } from './services/actions/student.action'
 import StudentUpdate from './components/StudentUpdate/StudentUpdate'
+import SignIn from './components/SignIn/SignIn'
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
         <Route element={<StudentForm/>} path='/add'/>
         <Route element={<StudentList/>} path='/'/>
         <Route element={<StudentUpdate/>} path='/update'/>
+        <Route element={<SignIn/>} path='/signin'/>
       </Routes>
     </>
   )
